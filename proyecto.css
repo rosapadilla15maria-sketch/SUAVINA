@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Century Gothic';
+}
+body{
+    background-color: var(--bg-primario);
+    width: 100%;
+}
+
+.menu{
+    width: 100%;
+    .menu-desplegable{
+        height: 45px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        list-style-type: none;
+        background-color: var(--bg-secundario);
+        position: fixed;
+        width: 100%;
+    }
+    a{
+        text-decoration: none;
+        color: var(--texto-secundario);
+        font-weight: bolder;
+    }
+}
+
+#m, label{
+    display: none;
+}
+@media (width<425px) {
+    body{
+        width: 100%;
+    }
+    .menu{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .menu-desplegable{
+            display: none;
+            width: 100%;
+            height: auto;
+            background-color: var(--bg-secundario);
+            flex-direction: column;            
+            padding: 20px;
+            gap: 20px;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+            list-style-type: none;
+
+            a{
+                text-decoration: none;
+                color: var(--texto-secundario2);
+                font-weight: bolder;
+            }
+        }
+    }
+    label{
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 10px;
+    }
+    #m:checked + .menu-desplegable {
+        display: flex; 
+        animation: desplazar 0.5s ease-in-out;
+    }
+    #quienes{
+        display: flex;
+        flex-direction: column;
+        background-color: var(--texto-secundario2);
+        width: 100%;
+
+        section{
+            background-color: pink;
+            .ubi{
+                width: 100%;
+            }
+        }
+    }
+}
+
+/*INTRODUCCION*/
+
+/*PROYECTO*/
+
+/*QUIENES SOMOS*/
+
+#quienes{
+    background-color: var(--texto-secundario2);
+
+    section{
+        background-color: pink;
+    }
+}
+@keyframes desplazar {
+    from{transform: translateX(-50px); opacity: 0;}
+    to{transform: translateX(0px); opacity: 1;}
+}
+
