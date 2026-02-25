@@ -9,7 +9,7 @@
 </head>
 
 
-<>
+
 
 <nav class="menu">
     <label for="m">☰</label>
@@ -54,7 +54,28 @@
 
   </div>
 </section>
-<script src="archivo.js"></script>
 
+<section id="test-aroma">
+
+  <h2>🌸 ¿Qué olor va contigo?</h2>
+  <button onclick="empezarTest()">Empezar cuestionario</button>
+
+  <div id="cuestionario" style="display:none; margin-top:20px;">
+
+    <p>¿Qué plan prefieres?</p>
+    <button onclick="sumar('fresa')">Salir con amigos</button>
+    <button onclick="sumar('menta')">Hacer deporte</button>
+    <button onclick="sumar('vainilla')">Netflix y manta</button>
+
+    <br><br>
+    <button onclick="mostrarResultado()">Ver resultado</button>
+
+  </div>
+
+  <div id="resultado" style="margin-top:20px;"></div>
+
+</section>
+
+<script src="formulario.js"></script>
 </body>
 </html>
