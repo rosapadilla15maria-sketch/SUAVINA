@@ -21,11 +21,15 @@ body{
         background-color: var(--bg-secundario);
         position: fixed;
         width: 100%;
+
+       
     }
     a{
         text-decoration: none;
         color: var(--texto-secundario);
         font-weight: bolder;
+        height: 100%;
+        display: flex;
      
     }
 }
@@ -45,7 +49,9 @@ body{
         position: relative;
         
     }
+   
     .menu{
+        position: relative;
         width: 100%;
         height: auto;
         display: flex;
@@ -132,7 +138,7 @@ body{
     }
 }
 
-/*INTRODUCCION*/
+
 
 /*PROYECTO*/
 
@@ -145,8 +151,106 @@ body{
         background-color: var(--bg-secundario2);
     }
 }
+
+
 @keyframes desplazar {
     from{transform: translateX(-50px); opacity: 0;}
     to{transform: translateX(0px); opacity: 1;}
 }
+/*INTRODUCCION*/
+.contenedor{
+    z-index: 9999;
+}
+ img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    
+ }
 
+ .texto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--texto-secundario2);
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 0;
+  transition: 0.5s ease;
+ 
+}
+ .contenedor:hover img {
+    opacity: 0.3;
+ }
+ .contenedor:hover .texto{
+    opacity: 1;
+ }
+
+h1{
+    padding: 10%;
+}
+ .intro {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f8f8f8;
+}
+
+.intro h2 {
+  margin-bottom: 40px;
+}
+
+.beneficios {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  width: 250px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 15px 0 10px 0;
+}
+
+.card p {
+  padding: 0 15px 20px 15px;
+  font-size: 14px;
+}
+
+/*PROYECTO SUAVINA*/
+
+#suavina{
+
+    
+    
+}
+
+#metodologia{
+
+
+
+}
+
+#resultados{
+
+
+    
+}
