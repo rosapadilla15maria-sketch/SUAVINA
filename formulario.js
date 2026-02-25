@@ -1,4 +1,4 @@
-// Definición de aromas
+
 const aromas = {
   fresa: {
     nombre: "Fresa",
@@ -17,14 +17,13 @@ const aromas = {
   }
 };
 
-// Inicialización de puntos
+
 let puntos = {
   fresa: 0,
   menta: 0,
   vainilla: 0
 };
 
-// Preguntas del test
 const preguntas = [
   {
     pregunta: "¿Qué plan prefieres?",
@@ -34,7 +33,7 @@ const preguntas = [
   {
     pregunta: "¿Cuál es tu estación favorita?",
     opciones: ["Primavera", "Verano", "Invierno"],
-    valores: ["floral", "cítrico", "vainilla"] // Puedes ajustar aromas si quieres
+    valores: ["floral", "cítrico", "vainilla"] 
   },
   {
     pregunta: "¿Qué te hace más feliz?",
@@ -43,48 +42,47 @@ const preguntas = [
   }
 ];
 
-let indicePregunta = 0; // Para saber en qué pregunta estamos
+let indicePregunta = 0; 
 
-// Función que inicia el test
+/
 function empezarTest(){
-  puntos = { fresa: 0, menta: 0, vainilla: 0 }; // Reiniciar puntos
+  puntos = { fresa: 0, menta: 0, vainilla: 0 }; 
   indicePregunta = 0;
-  document.getElementById("resultado").innerHTML = ""; // Limpiar resultado
+  document.getElementById("resultado").innerHTML = "";
   document.getElementById("cuestionario").style.display = "block";
   mostrarPregunta();
 }
 
-// Función que muestra la pregunta actual
+
 function mostrarPregunta(){
   const div = document.getElementById("cuestionario");
-  div.innerHTML = ""; // Limpiar contenido del cuestionario
-
+  div.innerHTML = ""; 
   if(indicePregunta < preguntas.length){
     const q = preguntas[indicePregunta];
 
-    // Mostrar la pregunta
+    
     const p = document.createElement("p");
     p.textContent = q.pregunta;
     div.appendChild(p);
 
-    // Crear botones para cada opción
+    
     q.opciones.forEach((opcion, i) => {
       const btn = document.createElement("button");
       btn.textContent = opcion;
       btn.onclick = () => {
-        sumar(q.valores[i]); // Sumar puntos
+        sumar(q.valores[i]);
         indicePregunta++;
-        mostrarPregunta(); // Pasar a la siguiente pregunta
+        mostrarPregunta(); 
       };
       div.appendChild(btn);
     });
   } else {
-    // Si ya no hay más preguntas, mostrar resultado
+    
     mostrarResultado();
   }
 }
 
-// Función para sumar puntos
+
 function sumar(aroma){
   if(puntos[aroma] !== undefined){
     puntos[aroma]++;
@@ -92,12 +90,12 @@ function sumar(aroma){
   console.log("Puntos actuales:", puntos);
 }
 
-// Función para mostrar resultado final
+
 function mostrarResultado(){
   const div = document.getElementById("cuestionario");
   div.style.display = "none"; // Ocultar cuestionario
 
-  // Obtener aroma con más puntos
+
   let ganador = Object.keys(puntos).reduce((a,b) =>
     puntos[a] >= puntos[b] ? a : b
   );

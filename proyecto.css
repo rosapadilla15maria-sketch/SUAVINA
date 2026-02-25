@@ -288,3 +288,106 @@ h1{
 
 
 /*ADVERTENCIA*/
+
+/*FORMULARIO*/
+
+#cuestionario {
+  background-color: #fff0f5; 
+  border: 2px solid #ffb6c1; 
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 500px;
+  margin: 20px auto;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+
+#cuestionario p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+
+#cuestionario button {
+  background-color: #ffb6c1;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 20px;
+  margin: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#cuestionario, #resultado {
+  display: none; 
+}
+#cuestionario button:hover {
+  background-color: #ff69b4;
+  transform: scale(1.05);
+}
+
+#test-aroma {
+  display: flex;
+  justify-content: center; 
+  align-items: center;  
+  height: 60vh;           
+  flex-direction: column;
+  text-align: center;
+  
+}
+#test-aroma > button {
+  background-color: #ff69b4;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 25px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 30px;
+}
+
+#test-aroma > button:hover {
+  background-color: #ff1493;
+  transform: scale(1.05);
+}
+
+
+#resultado {
+  max-width: 500px;
+  margin: 20px auto;
+  background-color: #fff0f5;
+  border: 2px solid #ffb6c1;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+#resultado h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ff1493;
+}
+
+#resultado p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+@media (max-width: 600px) {
+  #cuestionario, #resultado {
+    width: 90%;
+    padding: 15px;
+  }
+
+  #cuestionario button, #test-aroma > button {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
