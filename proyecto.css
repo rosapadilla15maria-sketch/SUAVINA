@@ -12,6 +12,9 @@ body{
 
 .menu{
     width: 100%;
+    position: fixed;
+    z-index: 1;
+
     .menu-desplegable{
         height: 45px;
         display: flex;
@@ -37,6 +40,46 @@ body{
 #m, label{
     display: none;
 }
+#quienes{
+        border-radius: 30px;
+        text-align: left;
+        margin: auto;
+        padding-top: 30px;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--bg-primario);
+        width: 90%;
+        position: relative;
+        top: 35px;
+
+        h2{
+            margin-bottom: 10px;
+        }
+    }
+      section{
+            border-radius: 30px;
+            background-color: var(--bg-secundario);
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 40px;
+            margin-bottom: 50px;
+
+            .lista-quienes{
+                margin-left: 30px;
+                margin-top: 20px;
+                li{
+                    margin-bottom: 20px;
+                }
+                &:last-child{
+                    margin-bottom: -10px;
+                }
+            }
+            .ubi{
+                border: 5px solid rgb(223, 73, 73);
+                width: 100%;
+            }
+        }
 @media (width<625px) {
     *{
     margin: 0;
@@ -132,7 +175,7 @@ body{
             }
             .ubi{
                 border: 5px solid rgb(223, 73, 73);
-                width: 80%;
+                width: 100%;
             }
         }
     }
