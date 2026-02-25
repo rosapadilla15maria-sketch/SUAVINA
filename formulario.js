@@ -93,7 +93,7 @@ function sumar(aroma){
 
 function mostrarResultado(){
   const div = document.getElementById("cuestionario");
-  div.style.display = "none"; // Ocultar cuestionario
+  div.style.display = "none"; 
 
 
   let ganador = Object.keys(puntos).reduce((a,b) =>
