@@ -24,7 +24,6 @@ body{
         background-color: var(--bg-secundario);
         position: fixed;
         width: 100%;
-
        
     }
     a{
@@ -40,6 +39,8 @@ body{
 #m, label{
     display: none;
 }
+
+/*QUIENES SOMOS*/
 #quienes{
         border-radius: 30px;
         text-align: left;
@@ -51,10 +52,15 @@ body{
         width: 90%;
         position: relative;
         top: 35px;
+        background-color: var(--bg-secundario);
 
         h2{
             margin-bottom: 10px;
         }
+
+        section{
+        background-color: var(--bg-secundario2);
+    }
     }
       section{
             border-radius: 30px;
@@ -80,121 +86,6 @@ body{
                 width: 100%;
             }
         }
-@media (width<625px) {
-    *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-    body{
-        width: 100%;
-        height: 100%;
-        position: relative;
-        
-    }
-   
-    .menu{
-        position: relative;
-        width: 100%;
-        height: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 2;
-        .menu-desplegable{
-            display: none;
-            width: 100%;
-            height: auto;
-            background-color: var(--bg-secundario);
-            flex-direction: column;            
-            padding: 20px;
-            gap: 20px;
-            border-top-right-radius: 30px;
-            border-bottom-right-radius: 30px;
-            list-style-type: none;
-            position: relative;
-        
-
-            a{
-                text-decoration: none;
-                color: var(--texto-secundario2);
-                font-weight: bolder;
-                height: 100%;
-                display: flex;
-           
-            }
-        }
-    }
-    label{
-        display: block;
-        position: absolute;
-        height: 100%;
-        left: 0;
-        top: 10px;
-        z-index: 1;
-    }
-    #m:checked + .menu-desplegable {
-        display: flex; 
-        animation: desplazar 0.5s ease-in-out;
-    }
-    #quienes{
-        border-radius: 30px;
-        text-align: left;
-        margin: auto;
-        margin-top: 10px;
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        background-color: var(--bg-primario);
-        width: 90%;
-        position: relative;
-        top: 35px;
-
-        h2{
-            margin-bottom: 10px;
-        }
-
-        section{
-            border-radius: 30px;
-            background-color: var(--bg-secundario);
-            width: 90%;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 40px;
-            margin-bottom: 50px;
-
-            .lista-quienes{
-                margin-left: 30px;
-                margin-top: 20px;
-                li{
-                    margin-bottom: 20px;
-                }
-                &:last-child{
-                    margin-bottom: -10px;
-                }
-            }
-            .ubi{
-                border: 5px solid rgb(223, 73, 73);
-                width: 100%;
-            }
-        }
-    }
-}
-
-
-
-/*PROYECTO*/
-
-/*QUIENES SOMOS*/
-
-#quienes{
-    background-color: var(--bg-secundario);
-
-    section{
-        background-color: var(--bg-secundario2);
-    }
-}
-
 
 @keyframes desplazar {
     from{transform: translateX(-50px); opacity: 0;}
@@ -203,17 +94,39 @@ body{
 /*INTRODUCCION*/
 .contenedor{
     z-index: 9999;
-}
- img{
+     .footer{
     width: 100%;
     height: 100%;
+    display: block;  
+ }
+
+ .monigote{
+  opacity: 0;
+  transition: 0.5s ease;
+  img{
+    position: absolute;
+    top: 43%;
+    left: 15%;
     display: block;
-    
+    width: 25%;
+    box-sizing: border-box;
+  }
+ }
+}
+
+ .contenedor:hover .footer {
+    opacity: 0.3;
+ }
+ .contenedor:hover .texto{
+    opacity: 1;
+ }
+ .contenedor:hover .monigote{
+    opacity: 1;
  }
 
  .texto {
   position: absolute;
-  top: 50%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: var(--texto-secundario2);
@@ -221,14 +134,7 @@ body{
   font-weight: bold;
   opacity: 0;
   transition: 0.5s ease;
- 
 }
- .contenedor:hover img {
-    opacity: 0.3;
- }
- .contenedor:hover .texto{
-    opacity: 1;
- }
 
 h1{
     padding: 10%;
