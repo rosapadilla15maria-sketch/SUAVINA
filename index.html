@@ -11,7 +11,7 @@
 
 
 
-
+<body>
 <nav class="menu">
     <label for="m">☰</label>
     <input type="checkbox" name="m" id="m">
@@ -24,11 +24,11 @@
     </ul>
 </nav>
 
-<section id="introduccion">
+<div id="introduccion">
 
 <div class="contenedor">
     <img src="images\1772005571331.jpg" class="footer">
-    <div class="texto">¡HOLA! MI NOMBRE ES SAVRINO Y OS VOY A ACOMPAÑAR EN ESTA WEB A CONOCER MÁS SOBRE LA SUAVINA</div>
+    <div class="texto">¡HOLA! MI NOMBRE ES SUAVINE Y OS VOY A ACOMPAÑAR EN ESTA WEB A CONOCER MÁS SOBRE LA SUAVINA</div>
     <div class="monigote"><img src="images\IMG_0307.png" alt=""></div>
 </div>
 
@@ -37,7 +37,7 @@
   <div class="beneficios">
 
     <div class="card">
-      <img src="" alt="Ingredientes naturales">
+      <img src="images/" alt="Ingredientes naturales">
       <h3>🌿 Ingredientes Naturales</h3>
       <p>Formulada con aceites esenciales y sin ingredientes agresivos.</p>
     </div>
@@ -49,7 +49,7 @@
     </div>
 
     <div class="card">
-      <img src="" alt="Tradición">
+      <img src="images/beauty-cream-with-natural-elements.jpg" alt="Tradición">
       <h3>🏆 Tradición y Calidad</h3>
       <p>Más de 100 años cuidando tus labios.</p>
     </div>
@@ -62,17 +62,7 @@
   <h2>🌸 ¿Qué olor va contigo?</h2>
   <button onclick="empezarTest()">Empezar cuestionario</button>
 
-  <div id="cuestionario" style="display:none; margin-top:20px;">
-
-    <p>¿Qué plan prefieres?</p>
-    <button onclick="sumar('fresa')">Salir con amigos</button>
-    <button onclick="sumar('menta')">Hacer deporte</button>
-    <button onclick="sumar('vainilla')">Netflix y manta</button>
-
-    <br><br>
-    <button onclick="mostrarResultado()">Ver resultado</button>
-
-  </div>
+  <div id="cuestionario" style="display:none; margin-top:20px;"></div>
 
   <div id="resultado" style="margin-top:20px;"></div>
 

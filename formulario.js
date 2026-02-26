@@ -33,7 +33,7 @@ const preguntas = [
   {
     pregunta: "¿Cuál es tu estación favorita?",
     opciones: ["Primavera", "Verano", "Invierno"],
-    valores: ["floral", "cítrico", "vainilla"] 
+    valores: ["fresa", "menta", "vainilla"] 
   },
   {
     pregunta: "¿Qué te hace más feliz?",
@@ -44,7 +44,7 @@ const preguntas = [
 
 let indicePregunta = 0; 
 
-/
+
 function empezarTest(){
   puntos = { fresa: 0, menta: 0, vainilla: 0 }; 
   indicePregunta = 0;
@@ -92,18 +92,38 @@ function sumar(aroma){
 
 
 function mostrarResultado(){
-  const div = document.getElementById("cuestionario");
-  div.style.display = "none"; 
 
+  const cuestionario = document.getElementById("cuestionario");
+  const resultado = document.getElementById("resultado");
 
-  let ganador = Object.keys(puntos).reduce((a,b) =>
-    puntos[a] >= puntos[b] ? a : b
-  );
+  cuestionario.style.display = "none";
+  resultado.style.display = "block";
 
-  const aroma = aromas[ganador];
+  // encontrar ganador manualmente
+  let ganador = "fresa";
+  let maxPuntos = puntos["fresa"];
 
-  document.getElementById("resultado").innerHTML = `
-    <h3>${aroma.emoji} Eres ${aroma.nombre}</h3>
-    <p>${aroma.descripcion}</p>
-  `;
+  for (let aroma in puntos) {
+    if (puntos[aroma] > maxPuntos) {
+      maxPuntos = puntos[aroma];
+      ganador = aroma;
+    }
+  }
+
+  console.log("Ganador:", ganador);
+  console.log("Puntos:", puntos);
+
+  const aromaGanador = aromas[ganador];
+
+  resultado.innerHTML =
+    "<h3>" + aromaGanador.emoji + " Eres " + aromaGanador.nombre + "</h3>" +
+    "<p>" + aromaGanador.descripcion + "</p>";
+}
+function sumar(aroma){
+  if(puntos[aroma] !== undefined){
+    puntos[aroma]++;
+  }
+
+  console.log("Se sumó:", aroma);
+  console.log("Puntos actuales:", puntos);
 }
