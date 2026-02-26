@@ -20,7 +20,7 @@ body{
         justify-content: space-around;
         align-items: center;
         list-style-type: none;
-        background-color: var(--bg-secundario2);
+        background-color: var(--bg-menu);
         position: fixed;
         width: 100%;
                
@@ -39,9 +39,21 @@ body{
     h2,h3{
       color: var(--texto-secundario);
     }
+    ul,ol{
+      li{
+        color: var(--texto-secundario);
+      }
+    }
 
 #m, label{
     display: none;
+}
+label{
+  font-size: 25px;
+  font-weight: bolder;
+  color: var(--bg-secundario2);
+  margin-left: 10px;
+  border-radius: 3px;
 }
 
 /*ESTILO COMUN SECCIONES*/
@@ -72,9 +84,11 @@ section{
     margin-bottom: 3%;
     margin-top: 3%;
   }
+  h4{
+    color: var(--texto-secundario2);
+  }
 
     section{
-      border: 5px solid var(--bg-secundario2);
       background-color: var(--bg-secundario2);
   }
   ul, ol{
@@ -91,23 +105,24 @@ section{
 #logo{
     display: flex;
     position: fixed;
+    z-index: 2;
     bottom: 20px;
     left: 0.5%;
     img{
       width: 25%;
     }
   }
-  .intro{
-    .contenedor{
-      background-color: red;
-    }
-    background-color: red;
-  }
 
 /*QUIENES SOMOS*/
+
 #quienes{
-  h1{
-    margin-bottom: -50px;
+  .fotogrupal{
+    img{
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: -50px;
+      border-radius: 30px;
+    }
   }
 }
 .quienes{
@@ -131,12 +146,19 @@ section{
 /*INTRODUCCION*/
 .contenedor{
     position: relative;
-    z-index: 9999;
+    display: flex;
+    flex: 0 1 1000px;
+    max-width: 1000px;
+    z-index: 1;
+    margin-left: auto;
+    margin-right: auto;
+      .texto{
+        color: var(--bg-secundario);
+      }
     .footer{
-      margin-left: auto;
-      margin-right: auto;
-      width: 90%;
-      height: 100%;
+      border-radius: 30px;
+      filter: brightness(0.5);
+      width: 100%;
       display: block; 
       opacity: 1; 
       transition: 0.5s ease;
@@ -151,14 +173,13 @@ section{
   .monigote img{
     position: absolute;
     top: 43%;
-    left: 15%;
+    left: 18%;
     display: block;
-    width: 25%;
+    width: 30%;
     box-sizing: border-box;
     transform: none;
     transition: 0.5s ease;
   }
-
 
  .contenedor:hover .footer {
     opacity: 0.3;
@@ -177,11 +198,18 @@ section{
   top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: var(--texto-secundario2);
-  font-size: 20px;
+  font-size: 150%;
   font-weight: bold;
   opacity: 0;
   transition: 0.5s ease;
+  background-color: var(--bg-secundario2);
+  padding: 20px;
+  padding-bottom: 80px;
+  clip-path: polygon(0 0, 100% 0%, 100% 75%, 61% 75%, 27% 98%, 36% 75%, 0% 75%);
+
+  p{
+    color: var(--texto-secundario2);
+  }
 }
 
 #titulointro h1{
@@ -190,7 +218,6 @@ section{
  .intro {
   text-align: center;
   padding: 50px 20px;
-  background-color: #f8f8f8;
 }
 
 .intro h2 {
@@ -205,7 +232,7 @@ section{
 }
 
 .card {
-  background: white;
+  background: var(--bg-secundario);
   width: 250px;
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -239,19 +266,28 @@ section{
   }
   .Suavina{
     margin-bottom: -50px;
+    p{
+    color: var(--texto-secundario2);
+  }
   }
 }
 
-
-
-
-
-
-
-
+#resultados{
+  .resultados{
+    img{
+      width: 100%;
+      border-radius: 30px;
+      margin-top: 5%;
+    }
+  }
+}
 
 /*ADVERTENCIA*/
-.riesgos{
+#advertencias{
+.Riesgos{
+  p{
+    color: var(--texto-secundario2);
+  }
   display: flex;
   align-items: center;
   gap: 20px;
@@ -261,6 +297,7 @@ section{
   width: 250px;
   height: auto;
 }
+}
 
 
   
@@ -269,8 +306,7 @@ section{
 /*FORMULARIO*/
 
 #cuestionario {
-  background-color: #fff0f5; 
-  border: 2px solid #ffb6c1; 
+  background-color: var(--bg-primario); 
   border-radius: 15px;
   padding: 20px;
   max-width: 500px;
@@ -290,7 +326,7 @@ section{
 
 
 #cuestionario button {
-  background-color: #ffb6c1;
+  background-color: var(--bg-secundario2);
   color: #fff;
   border: none;
   border-radius: 10px;
@@ -310,7 +346,6 @@ section{
 }
 
 #cuestionario button:hover {
-  background-color: #ff69b4;
   transform: scale(1.05);
 }
 
@@ -321,10 +356,13 @@ section{
   height: 60vh;           
   flex-direction: column;
   text-align: center;
+  h2{
+    color: var(--texto-secundario2);
+  }
   
 }
 #test-aroma > button {
-  background-color: #ff69b4;
+  background-color: #b65b7e;
   color: #fff;
   border: none;
   border-radius: 10px;
@@ -332,11 +370,10 @@ section{
   font-size: 1.2rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-top: 30px;
 }
 
 #test-aroma > button:hover {
-  background-color: #ff1493;
+  background-color: #c0527c;
   transform: scale(1.05);
 }
 
@@ -374,3 +411,8 @@ section{
     margin: 5px 0;
   }
 }
+
+/*CONCLUSION*/
+
+
+

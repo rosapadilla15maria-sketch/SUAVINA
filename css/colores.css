@@ -1,10 +1,19 @@
 :root {
-    --bg-primario: #F0F4F8;
+
+    --bg-primario: #f0f4f8;
+    --bg-menu: #723d52;
+    --bg-secundario: #41242f;
+    --bg-secundario2: #92516a;
+    --texto-secundario2: #f0f4f8;
+    --texto-secundario: #f0f4f8;
+    /*--bg-secundario3: #E0C097;*/
+
+    /*--bg-primario: #F0F4F8;
     --bg-secundario: #334E68;
     --bg-secundario2: #D9E2EC;
     --texto-secundario2: #D9E2EC;
     --texto-secundario: #334E68;
-    --bg-secundario3: #E0C097;
+    --bg-secundario3: #E0C097;*/
 
     /*--bg-primario: #eef7eb;
     --bg-secundario: #e8e1f4;

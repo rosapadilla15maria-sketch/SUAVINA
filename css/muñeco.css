@@ -6,6 +6,15 @@
   margin-top: 20px;
 }
 
+.monigoteconc {
+  display: none;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  border-radius: 15px;
+}
+
+
 /* PANEL DE PRENDAS */
 .panel-prendas {
   width: 180px;
@@ -64,3 +73,15 @@
 .zona #mascarilla { width: 100px; }
 .zona #guanteD,
 .zona #guanteI { width: 60px; }
+
+@media (max-width: 625px) {
+
+  .juego {
+    display: none;
+  }
+
+  .monigoteconc {
+    display: block;
+  }
+
+}

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/proyecto.css">
     <link rel="stylesheet" href="css/movil.css">
     <link rel="stylesheet" href="css/colores.css">
+    <link rel="stylesheet" href="css\galeria.css">
 </head>
 
 
@@ -93,49 +94,41 @@
       </nav>
     </section>
 
+    <section id="resultados">
+    <h2>RESULTADOS</h2>
+    <nav class="resultados">
+    <p>La realización del bálsamo de Suavina ha dado como resultado un producto cremoso, homogéneo y con una textura suave y fácil de aplicar. La mezcla de los ingredientes ha permitido obtener un aroma agradable y característico, además de una consistencia estable que se mantiene sólida a temperatura ambiente pero se funde ligeramente al contacto con la piel. El producto final destaca por su capacidad hidratante y protectora, dejando los labios nutridos, suaves y con una sensación de alivio inmediato frente a la sequedad.</p>
+      <img src="images/botes finales.jpeg" alt="">
 
-    <section id="final">
-      <nav class="final">
-        <p>Este proyecto ha permitido aplicar conocimientos relacionados con la formulación farmacéutica básica, el cálculo de componentes, el manejo de material de laboratorio y la elaboración de preparados dermofarmacéuticos, competencias fundamentales en la formación del técnico en Farmacia y Parafarmacia.</p>
-      </nav>
+    </nav>
     </section>
 
-<!--<section id="Composicion-Caracteristicas" class="Proyecto">
-<h3>COMPOSICIÓN Y CARACTERÍSTICAS:</h3>
-<nav class="Caracteristicas">
-<p><ul>
-  <li> Fórmula: Se basa en una mezcla de aceites esenciales 100% naturales y mentol sobre una base de vaselina (petrolatum)
-</li>
-  <li>Efecto: Proporciona un aroma cítrico y mentolado característico que deja una sensación de frescor en la piel.
-</li>
-<li>Formatos: Aunque el más clásico es el tarro metálico (o plástico imitando el antiguo), también está disponible en tubo y en versiones con diferentes aromas (Citrus, Olea, Helianthus) o fórmulas específicas como la pediátrica. 
-</li>
-</ul></p></nav></section>-->
 
-<!--<section id="Perfume" class="Proyecto">
-<h4>COMPUESTOS PRESENTES EN EL PERFUME:</h4>
-<nav class="Perfume">
-<p><ul>
-  <li>Limonene, Linalool, Citral, Citronellol, Geraniol: Terpenos naturales presentes en cítricos y flores.
-</li>
-  <li> Menthol (Mentol): Proporciona la sensación de frescor y alivio.</li>
-</ul></p></nav>
-</section>-->
 
-<!--<section id="Metodología" class="Proyecto">
-    <h1>METODOLOGÍA</h1>
-    <nav class="Metodologia">
-    <p>Aunque la fórmula exacta de Suavina Calduch es un secreto, la elaboración de un bálsamo labial similar, rico y protector, sigue este proceso:</p>
-<ul>
-<li>Ingredientes Principales: Cera de abejas (para dureza), manteca de karité (hidratación), aceites vegetales (almendras dulces o aceite de oliva), y aceites esenciales para aroma (como mentol).
-</li>
-<li>Fusión: Se mezclan los ingredientes sólidos (cera y manteca) y los aceites en un recipiente resistente al calor. Se calientan a fuego suave o al baño maría hasta que estén completamente fundidos.
-</li>
-<li>Adición de Aromas/Activos: Una vez derretido, se retira del fuego y se añade la esencia aromática y el mentol (ingrediente clave de la Suavina original).</li>
-<li>Envasado: Se vierte la mezcla líquida en los recipientes pequeños (latas).</li>
-<li>Enfriamiento: Se deja reposar a temperatura ambiente o en nevera durante varias horas hasta que se solidifique completamente.</li>
-</ul>
-</nav></section>-->
+<div id="galeria-desplegable">
+
+  <!-- Flecha fija a la derecha -->
+  <button id="toggle-galeria">🧪</button>
+
+  <!-- Galería desplegable -->
+  <div class="galeria-contenedor">
+    <img src="images/cutieee.jpeg" alt="Foto 1">
+    <img src="images/boteee.jpeg" alt="Foto 2">
+    <img src="images/peso boy.jpeg" alt="Foto 3">
+  </div>
+  
+</div>
+
+<script>
+  const boton = document.getElementById('toggle-galeria');
+  const galeria = document.querySelector('.galeria-contenedor');
+
+  boton.addEventListener('click', () => {
+    galeria.style.display = galeria.style.display === 'flex' ? 'none' : 'flex';
+    boton.classList.toggle('abierto');
+  });
+</script>
+
 </section>
 
 <div id="logo">

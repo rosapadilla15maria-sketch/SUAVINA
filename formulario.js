@@ -52,10 +52,18 @@ let indicePregunta = 0;
 
 
 function empezarTest(){
-  puntos = { fresa: 0, menta: 0, vainilla: 0 }; 
+  // Reiniciar puntos y preguntas
+  puntos = { fresa: 0, menta: 0, vainilla: 0, maracuya: 0 }; 
   indicePregunta = 0;
-  document.getElementById("resultado").innerHTML = "";
-  document.getElementById("cuestionario").style.display = "block";
+
+  // Esconder resultado y mostrar cuestionario
+  const resultado = document.getElementById("resultado");
+  const cuestionario = document.getElementById("cuestionario");
+
+  resultado.style.display = "none"; 
+  resultado.innerHTML = "";           
+
+  cuestionario.style.display = "block"; 
   mostrarPregunta();
 }
 

@@ -11,7 +11,7 @@
     }
    /*MENU DESPLEGABLE*/
     .menu{
-        position: relative;
+        position: fixed;
         width: 100%;
         height: auto;
         display: flex;
@@ -57,7 +57,7 @@
     }
 
     /*QUIENES SOMOS*/
-    #quienes{
+    /*#quienes{
         border-radius: 30px;
         text-align: left;
         margin: auto;
@@ -70,8 +70,8 @@
         position: relative;
         top: 35px;
 
-        h2{
-            margin-bottom: 10px;
+        h1{
+            margin-bottom: -50px;
         }
 
         section{
@@ -101,38 +101,102 @@
                 width: 100%;
             }
         }
-    }
+    }*/
 
     /*INTRODUCCIÓN*/
     /*MONIGOTE*/
-.footer{
-    opacity: 0.3;
-    filter: blur(1px);
-    transition: none;
- }
- .texto{
-    opacity: 1;
-    top: 160px;
-    transition: none;
- }
- .monigote{
-    opacity: 1;
-    transition: none;
-    
- }
 
-  .monigote img {
-    
+.contenedor{
+    .footer{
+        position: relative;
+        opacity: 1;
+        filter: none;
+        transition: none;
+        filter: brightness(0.5);
+        img{
+            filter: none;
+        }
+}
+
+    .monigote{
+        opacity: 1;
+        transition: none;
+        position: absolute;
+        height: 40px;
+        width: 100%;
+        bottom: 40%;
+        img{
+        position: absolute;
+        right: auto;
+        }
+    }
+}
+
+.texto{
+    top:40%;
     position: absolute;
-    top: 55%;          
-    left: 15%;  
-    width: 25%;    
-    transform: none;  
-    transition: none; 
+    opacity: 1;
+    transition: none;
+    font-size: 100%;
+}
+
+.contenedor:hover .footer {
+    opacity: 1;
+    filter: brightness(0.5);
+}
+
+.contenedor:hover .texto{
+    opacity: 1;
+}
+
+.contenedor:hover .monigote{
+    opacity: 1;
+}
+
+.card{
+    transition: none;
+}
+
+.card:hover{
+    transform: none;
+}
+
+  /*FORMULARIO*/
+  #cuestionario button,
+  #test-aroma button{
+    transition: none;
   }
+
+  #cuestionario button:hover{
+    background-color: #ffb6c1;
+    transform: none;
+  }
+
+  #test-aroma button:hover{
+    background-color: #ff69b4;
+    transform: none;
+  }
+
+ 
+  #cuestionario button:active {
+    background-color: #ff69b4; /* color que quieras al pulsar */
+    transform: none;
+  }
+
+  #test-aroma button:active {
+    background-color: #ff1493; /* color que quieras al pulsar */
+    transform: none;
+  }
+
+  /* quitar transiciones en móvil */
+  #cuestionario button,
+  #test-aroma button {
+    transition: none;
+  }
+}
  
 
 
 
-}
+
     

@@ -1,0 +1,117 @@
+/* Contenedor principal */
+#galeria-desplegable {
+  position: relative;
+  z-index: 1000;
+}
+
+/* Flecha fija */
+#toggle-galeria {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: #41242f;
+  transition: transform 0.3s ease;
+  z-index: 1010;
+}
+
+#toggle-galeria.abierto {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* GALERÍA */
+.galeria-contenedor {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 70%;
+  max-width: 900px;
+  padding: 20px;
+
+  background-color: rgba(65, 36, 47, 0.7);
+  border-radius: 15px;
+
+  display: none;
+
+  /* FLEX como las cards */
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+
+  z-index: 1000;
+
+  /* ✅ SCROLL VERTICAL */
+  max-height: 60vh;      /* máximo 60% de la altura de la pantalla */
+  overflow-y: auto;      /* aparece scroll si hace falta */
+  overflow-x: hidden;    /* evita scroll horizontal */
+}
+
+/* Scroll más estético */
+.galeria-contenedor::-webkit-scrollbar {
+  width: 8px;
+}
+
+.galeria-contenedor::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.4);
+  border-radius: 4px;
+}
+
+/* IMÁGENES estilo card */
+.galeria-contenedor img {
+
+  flex: 0 1 250px;
+  width: 250px;
+  height: 200px;
+
+  object-fit: contain;
+
+  border-radius: 10px;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* efecto hover opcional */
+.galeria-contenedor img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+
+  .galeria-contenedor {
+    width: 85%;
+    max-height: 70vh;   /* más espacio vertical en tablet */
+  }
+
+  .galeria-contenedor img {
+    flex: 0 1 200px;
+    width: 200px;
+    height: 160px;
+  }
+
+}
+
+/* Móvil */
+@media (max-width: 480px) {
+
+  .galeria-contenedor {
+    width: 90%;
+    max-height: 80vh;   /* casi toda la pantalla */
+    top: 10%;
+  }
+
+  .galeria-contenedor img {
+    flex: 0 1 100%;
+    width: 100%;
+    height: auto;
+  }
+
+}

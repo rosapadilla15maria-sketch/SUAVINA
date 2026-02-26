@@ -9,68 +9,63 @@
     <link rel="stylesheet" href="css/colores.css">
 </head>
 
-
-
 <body>
-<nav class="menu">
-    <label for="m">☰</label>
-    <input type="checkbox" name="m" id="m">
-    <ul class="menu-desplegable">
-        <li><a href="#introduccion">Introducción</a></li>
-        <li><a href="quienes.html">Quiénes Somos</a></li>
-        <li><a href="proyecto.html">Proyecto</a></li>
-        <li><a href="advertencia.html">Advertencias</a></li>
-    </ul>
-</nav>
+  <nav class="menu">
+      <label for="m">☰</label>
+      <input type="checkbox" name="m" id="m">
+      <ul class="menu-desplegable">
+          <li><a href="#introduccion">Introducción</a></li>
+          <li><a href="quienes.html">Quiénes Somos</a></li>
+          <li><a href="proyecto.html">Proyecto</a></li>
+          <li><a href="advertencia.html">Advertencias</a></li>
+      </ul>
+  </nav>
   <div class="intro">
-<div class="contenedor">
-    <img src="images\1772005571331.jpg" class="footer">
-    <div class="texto">¡HOLA! MI NOMBRE ES SUAVINE Y OS VOY A ACOMPAÑAR EN ESTA WEB A CONOCER MÁS SOBRE LA SUAVINA</div>
-    <div class="monigote"><img src="images\IMG_0307.png" alt=""></div>
-</div>
-
-<div id="titulointro">
- <h1>¿Por qué elegir Suavina?</h1>
- </div>
-
-  <div class="beneficios">
-
-    <div class="card">
-      <img src="images/WhatsApp Image 2026-02-26 at 12.18.50.jpeg" alt="Ingredientes naturales">
-      <h3>🌿 Ingredientes Naturales</h3>
-      <p>Formulada con aceites esenciales y sin ingredientes agresivos.</p>
+    <div class="contenedor">
+        <img src="images\recortar2.jpeg" class="footer">
+        <div class="texto"><p>¡HOLA! MI NOMBRE ES SUAVINE Y OS VOY A ACOMPAÑAR EN ESTA WEB A CONOCER MÁS SOBRE LA SUAVINA</p></div>
+        <div class="monigote"><img src="images\IMG_0307.png" alt=""></div>
     </div>
 
-    <div class="card">
-      <img src="images/WhatsApp Image 2026-02-26 at 12.24.46.jpeg" alt="Hidratación">
-      <h3>💧 Hidratación Duradera</h3>
-      <p>Protege y repara los labios durante horas.</p>
+    <div id="titulointro">
+      <h1>¿Por qué elegir Suavina?</h1>
     </div>
 
-    <div class="card">
-      <img src="images/beauty-cream-with-natural-elements.jpg" alt="Tradición">
-      <h3>🏆 Tradición y Calidad</h3>
-      <p>Más de 100 años cuidando tus labios.</p>
+    <div class="beneficios">
+      <div class="card">
+        <img src="images/WhatsApp Image 2026-02-26 at 12.18.50.jpeg" alt="Ingredientes naturales">
+        <h3>🌿 Ingredientes Naturales</h3>
+        <p>Formulada con aceites esenciales y sin ingredientes agresivos.</p>
+      </div>
+
+      <div class="card">
+        <img src="images/WhatsApp Image 2026-02-26 at 12.24.46.jpeg" alt="Hidratación">
+        <h3>💧 Hidratación Duradera</h3>
+        <p>Protege y repara los labios durante horas.</p>
+      </div>
+
+      <div class="card">
+        <img src="images/beauty-cream-with-natural-elements.jpg" alt="Tradición">
+        <h3>🏆 Tradición y Calidad</h3>
+        <p>Más de 100 años cuidando tus labios.</p>
+      </div>
     </div>
 
+    <section id="test-aroma">
+
+      <h2>🌸 ¿Qué olor va contigo? 🌸</h2>
+      <button onclick="empezarTest()">Empezar cuestionario</button>
+
+      <div id="cuestionario" style="display:none; margin-top:20px;"></div>
+
+      <div id="resultado" style="margin-top:20px;"></div>
+
+    </section>
+
+    <script src="formulario.js"></script>
+  </div>  
+  <div id="logo">
+    <img src="images\logo_iesjplanes_v3_txt2 (1).png" alt="Logo del Instituto José Planes">
   </div>
-</section>
-
-<section id="test-aroma">
-
-  <h2>🌸 ¿Qué olor va contigo? 🌸</h2>
-  <button onclick="empezarTest()">Empezar cuestionario</button>
-
-  <div id="cuestionario" style="display:none; margin-top:20px;"></div>
-
-  <div id="resultado" style="margin-top:20px;"></div>
-
-</section>
-
-<script src="formulario.js"></script>
-</div>  
-<div id="logo">
-  <img src="images\logo_iesjplanes_v3_txt2 (1).png" alt="Logo del Instituto José Planes">
-</div>
 </body>
 </html>
