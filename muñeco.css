@@ -1,0 +1,66 @@
+.juego {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+/* PANEL DE PRENDAS */
+.panel-prendas {
+  width: 180px;
+  min-height: 200px;
+  min-width: 100px;
+  background: #f4f6f8;
+  border-radius: 15px;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  align-content: flex-start;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Prendas pequeñas y monas */
+.panel-prendas .prenda {
+  width: 50%;
+  height: auto;
+  cursor: grab;
+  transition: transform 0.2s ease;
+}
+
+.panel-prendas .prenda:hover {
+  transform: scale(1.1);
+}
+
+/* ZONA DEL MUÑECO */
+.zona {
+    position: relative;
+    max-width: 360px;   /* más grande */
+    max-height: 360px;  /* más alto */
+    min-width: 360px;   /* más grande */
+    min-height: 360px;  /* más alto */
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    overflow: hidden;
+}
+
+/* Muñeco más grande */
+.zona .suavine {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Cuando la prenda ya está en la zona */
+.zona .prenda {
+  position: absolute;
+  z-index: 10;
+}
+.zona #bata { width: 205px; }
+.zona #gafas { width: 100px; }
+.zona #mascarilla { width: 100px; }
+.zona #guanteD,
+.zona #guanteI { width: 60px; }

@@ -13,18 +13,17 @@ body{
 .menu{
     width: 100%;
     position: fixed;
-    z-index: 1;
-
+    z-index: 100000;
     .menu-desplegable{
         height: 45px;
         display: flex;
         justify-content: space-around;
         align-items: center;
         list-style-type: none;
-        background-color: var(--bg-secundario);
+        background-color: var(--bg-secundario2);
         position: fixed;
         width: 100%;
-       
+               
     }
     a{
         text-decoration: none;
@@ -32,9 +31,14 @@ body{
         font-weight: bolder;
         height: 100%;
         display: flex;
-     
     }
 }
+    p{
+      color: var(--texto-secundario);
+    }
+    h2,h3{
+      color: var(--texto-secundario);
+    }
 
 #m, label{
     display: none;
@@ -58,21 +62,23 @@ section{
   text-align: left;
 
   h1{
-    border: 2px solid red;
+    display: inline-block;
+    color: var(--texto-secundario2);
   }
   h2{
-    border: 2px solid blue;
+    margin-bottom: 5%;
+  }
+  h3{
+    margin-bottom: 3%;
+    margin-top: 3%;
   }
 
     section{
+      border: 5px solid var(--bg-secundario2);
       background-color: var(--bg-secundario2);
   }
-}
-
-/*QUIENES SOMOS*/
-#quienes{
-  .lista-quienes{
-      margin-left: 30px;
+  ul, ol{
+     margin-left: 30px;
       margin-top: 20px;
       li{
           margin-bottom: 20px;
@@ -80,6 +86,28 @@ section{
       &:last-child{
           margin-bottom: -10px;
       }
+  }
+}
+#logo{
+    display: flex;
+    position: fixed;
+    bottom: 20px;
+    left: 0.5%;
+    img{
+      width: 25%;
+    }
+  }
+  .intro{
+    .contenedor{
+      background-color: red;
+    }
+    background-color: red;
+  }
+
+/*QUIENES SOMOS*/
+#quienes{
+  h1{
+    margin-bottom: -50px;
   }
 }
 .quienes{
@@ -102,28 +130,35 @@ section{
 }
 /*INTRODUCCION*/
 .contenedor{
+    position: relative;
     z-index: 9999;
-     .footer{
+    .footer{
       margin-left: auto;
       margin-right: auto;
-    width: 90%;
-    height: 100%;
-    display: block;  
+      width: 90%;
+      height: 100%;
+      display: block; 
+      opacity: 1; 
+      transition: 0.5s ease;
  }
+}
 
  .monigote{
   opacity: 0;
   transition: 0.5s ease;
-  img{
+ 
+ }
+  .monigote img{
     position: absolute;
     top: 43%;
     left: 15%;
     display: block;
     width: 25%;
     box-sizing: border-box;
+    transform: none;
+    transition: 0.5s ease;
   }
- }
-}
+
 
  .contenedor:hover .footer {
     opacity: 0.3;
@@ -149,8 +184,8 @@ section{
   transition: 0.5s ease;
 }
 
-h1{
-    padding: 10%;
+#titulointro h1{
+    padding: 5%;
 }
  .intro {
   text-align: center;
@@ -198,7 +233,14 @@ h1{
 }
 
 /*PROYECTO*/
-
+#Suavina{
+  h1{
+    margin-bottom: 20px;
+  }
+  .Suavina{
+    margin-bottom: -50px;
+  }
+}
 
 
 
@@ -209,6 +251,20 @@ h1{
 
 
 /*ADVERTENCIA*/
+.riesgos{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+}
+.imagen{
+  width: 250px;
+  height: auto;
+}
+
+
+  
+
 
 /*FORMULARIO*/
 

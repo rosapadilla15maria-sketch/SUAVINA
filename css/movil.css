@@ -105,30 +105,32 @@
 
     /*INTRODUCCIÓN*/
     /*MONIGOTE*/
-  
- .footer{
+.footer{
     opacity: 0.3;
+    filter: blur(1px);
+    transition: none;
  }
  .texto{
     opacity: 1;
     top: 160px;
+    transition: none;
  }
  .monigote{
     opacity: 1;
+    transition: none;
     
  }
 
   .monigote img {
+    
     position: absolute;
-    top: 25%;          
+    top: 55%;          
     left: 15%;  
     width: 25%;    
     transform: none;  
     transition: none; 
   }
- .contenedor{
-    position: relative;
- }
+ 
 
 
 
