@@ -106,16 +106,31 @@
     /*INTRODUCCIÓN*/
     /*MONIGOTE*/
   
- .texto {
-  position: absolute;
-  top: 10%;
-  
-}
-.monigote{
+ .footer{
+    opacity: 0.3;
+ }
+ .texto{
+    opacity: 1;
+    top: 160px;
+ }
+ .monigote{
+    opacity: 1;
     
+ }
+
+  .monigote img {
     position: absolute;
-    
-}
+    top: 25%;          
+    left: 15%;  
+    width: 25%;    
+    transform: none;  
+    transition: none; 
+  }
+ .contenedor{
+    position: relative;
+ }
+
+
 
 }
     
