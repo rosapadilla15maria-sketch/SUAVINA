@@ -46,10 +46,10 @@
 /* ZONA DEL MUÑECO */
 .zona {
     position: relative;
-    max-width: 360px;   /* más grande */
-    max-height: 360px;  /* más alto */
-    min-width: 360px;   /* más grande */
-    min-height: 360px;  /* más alto */
+    max-width: 360px;  
+    max-height: 360px; 
+    min-width: 360px;  
+    min-height: 360px; 
     border-radius: 15px;
     background: #ffffff;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);

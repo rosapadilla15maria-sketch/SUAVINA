@@ -47,10 +47,10 @@
 
   z-index: 1000;
 
-  /* ✅ SCROLL VERTICAL */
-  max-height: 60vh;      /* máximo 60% de la altura de la pantalla */
-  overflow-y: auto;      /* aparece scroll si hace falta */
-  overflow-x: hidden;    /* evita scroll horizontal */
+  /*SCROLL VERTICAL */
+  max-height: 60vh; 
+  overflow-y: auto; 
+  overflow-x: hidden;  
 }
 
 /* Scroll más estético */
@@ -77,18 +77,16 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* efecto hover opcional */
 .galeria-contenedor img:hover {
   transform: scale(1.05);
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-/* Tablet */
 @media (max-width: 768px) {
 
   .galeria-contenedor {
     width: 85%;
-    max-height: 70vh;   /* más espacio vertical en tablet */
+    max-height: 70vh; 
   }
 
   .galeria-contenedor img {
@@ -99,12 +97,11 @@
 
 }
 
-/* Móvil */
 @media (max-width: 480px) {
 
   .galeria-contenedor {
     width: 90%;
-    max-height: 80vh;   /* casi toda la pantalla */
+    max-height: 80vh; 
     top: 10%;
   }
 
