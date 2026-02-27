@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Century Gothic';
+    font-size: 16px;
 }
 body{
     background-color: var(--bg-primario);
@@ -58,8 +59,27 @@ label{
 
 /*ESTILO COMUN SECCIONES*/
 
+#pie-de-pagina{
+  padding-top: 30px;
+  h3{
+    background-color: var(--bg-secundario);
+    text-align: end;
+    padding-right: 30px;
+    padding-top: 20px;
+  }
+  ul{
+    background-color: var(--bg-secundario);
+    text-align: end;
+    li{
+      padding-right: 50px;
+    }
+    padding-bottom: 30px;
+  }
+}
+
 section{
-  border-radius: 30px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
   background-color: var(--bg-secundario);
   width: 90%;
   margin-left: auto;
@@ -76,20 +96,33 @@ section{
   h1{
     display: inline-block;
     color: var(--texto-secundario2);
+    font-size: clamp(1.8rem, 4vw, 3rem);
   }
   h2{
     margin-bottom: 5%;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
   }
   h3{
     margin-bottom: 3%;
     margin-top: 3%;
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
   }
+
+  p, li{
+    font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  }
+
   h4{
     color: var(--texto-secundario2);
   }
 
     section{
       background-color: var(--bg-secundario2);
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      &:hover{
+        transform: translateY(-10px);
+      }
   }
   ul, ol{
      margin-left: 30px;
@@ -110,6 +143,7 @@ section{
     left: 0.5%;
     img{
       width: 25%;
+      background-color: var(--bg-primario);
     }
   }
 
@@ -256,7 +290,7 @@ section{
 
 .card p {
   padding: 0 15px 20px 15px;
-  font-size: 14px;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
 }
 
 /*PROYECTO*/
@@ -265,9 +299,27 @@ section{
     margin-bottom: 20px;
   }
   .Suavina{
+    width: 100%;
+    display: flex;
     margin-bottom: -50px;
+    #monigote-proyecto{
+      display: flex;
+      flex: 0 0 30%;
+      img{
+        width: 50%;
+        object-fit: contain;
+      }
+      p{
+        font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+      }
+    }
     p{
     color: var(--texto-secundario2);
+  }
+  .info{
+    display: flex;
+    flex: 0 0 70%;
+    padding-right: 40px;
   }
   }
 }
@@ -284,9 +336,14 @@ section{
 
 /*ADVERTENCIA*/
 #advertencias{
+  h1{
+    margin-bottom: 20px;
+  }
 .Riesgos{
+  width: 100%;
   p{
     color: var(--texto-secundario2);
+    width: 70%;
   }
   display: flex;
   align-items: center;
@@ -294,7 +351,7 @@ section{
 
 }
 .imagen{
-  width: 250px;
+  width: 30%;
   height: auto;
 }
 }
@@ -350,6 +407,7 @@ section{
 }
 
 #test-aroma {
+  border-radius: 30px;
   display: flex;
   justify-content: center; 
   align-items: center;  
